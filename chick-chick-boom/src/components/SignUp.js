@@ -13,9 +13,10 @@ function SignUp({ setCurrentUser }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username,
-        password,
+        username: username,
+        password_digest:password,
         password_confirmation: passwordConfirmation,
+        
       }),
     }).then((r) => {
       if (r.ok) {
