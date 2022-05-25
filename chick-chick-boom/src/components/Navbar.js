@@ -1,7 +1,9 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import LogoutButton from './LogoutButton';
+import LoginButton from './LoginButton';
 
-function Navbar({currentUser, setCurrentUser}) {
+function Navbar({currentUser, isAuthenticated}) {
 
 return (
     <header className="shadow-lg">
@@ -17,6 +19,8 @@ return (
                         <NavLink to="/">Profile</NavLink>
                     </div>    
                 </li>
+                {isAuthenticated ?
+                <LogoutButton/> : <LoginButton/>}
             </ul>
         </div>
     </header>

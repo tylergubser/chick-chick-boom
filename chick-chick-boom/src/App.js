@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-     <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
+     <Navbar currentUser={currentUser} isAuthenticated={isAuthenticated}/>
     <Switch>
       <Route exact path="/">
         <Home/>
