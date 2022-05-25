@@ -3,11 +3,13 @@ import { Route, Switch } from "react-router-dom";
 import './App.css';
 import Home from './components/Home.js'
 import Navbar from './components/Navbar.js'
-import Login from './components/Login.js';
-import SignUp from './components/SignUp.js';
+import Profile from './components/Profile.js'
+import { useAuth0 } from "@auth0/auth0-react";
+
 
 function App() {
   const [currentUser, setCurrentUser] = useState('');
+  const { user, isAuthenticated, isLoading } = useAuth0();
   
   useEffect( ()=> {
     fetch('http://localhost:3000/auth')
@@ -23,27 +25,14 @@ function App() {
   return (
     <div className="App">
      <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser}/>
-     <main>
-       {currentUser ? (
-     <Switch>
-       <Route exact path="/">
-         <Home/>
-       </Route>
-     </Switch>
-       ) : (
-        <Switch>
-            <Route path="/signup">
-              <SignUp setCurrentUser={setCurrentUser}/> 
-            </Route>
-            <Route path="/login">
-              <Login setCurrentUser={setCurrentUser} />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        )} 
-     </main>
+    <Switch>
+      <Route exact path="/">
+        <Home/>
+      </Route>
+      <Route exact path="/profile">
+        <Profile/>
+      </Route>
+    </Switch>
     </div>
   );
 }
