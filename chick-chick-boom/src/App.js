@@ -11,16 +11,30 @@ function App() {
   const [currentUser, setCurrentUser] = useState('');
   const { user, isAuthenticated, isLoading } = useAuth0();
   
-  useEffect( ()=> {
-    fetch('http://localhost:3000/auth')
-    .then(res => {
-      if(res.ok){
-        res.json().then(user => setCurrentUser(user))
-      }
-    })
-  },[])
+  // useEffect(() => {
+  //   if (isAuthenticated) {
 
-  // if(!currentUser) return <Login setCurrentUser={setCurrentUser}/>
+  //   fetch(`http://localhost:3000/users?username=${user.nickname}`)
+  //   .then(resp => resp.json())
+  //   .then(person => console.log(person))
+  //   }
+  // },[user])
+  
+  useEffect(() => {
+    if (isAuthenticated) {
+
+    fetch("http://localhost:3000/users",
+    {
+      method: "POST",
+      headers: { 'Content-Type' : 'application/json' },
+      body: JSON.stringify({username:user.nickname})
+    })
+    .then(resp => resp.json())
+    .then(person => console.log(person))
+    }
+  },[user]) 
+
+  
 
   return (
     <div className="App">
