@@ -1,7 +1,11 @@
 
 function Hospital () {
 
-
+return(
+    <div>
+        
+    </div>
+)
 
 
 }
