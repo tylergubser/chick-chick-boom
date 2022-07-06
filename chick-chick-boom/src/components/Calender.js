@@ -4,7 +4,7 @@ function Calender(){
 return(
     <div>
         <div>
-            <h1>Calender</h1>
+            <h1>Calender Goes Here</h1>
         </div>
     </div>
 )
