@@ -4,7 +4,7 @@ function Hospital () {
 return(
     <div>
         <div>
-            <h1>Hospital</h1>
+            <h1>Hospital Feature</h1>
         </div>
     </div>
 )
