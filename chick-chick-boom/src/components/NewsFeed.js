@@ -13,7 +13,7 @@ function NewsFeed() {
 return(
     <div>
         <div>
-            <h5>News Feed Goes Here</h5>
+            {post}
         </div>
     </div>
 )
