@@ -1,6 +1,6 @@
 
 
-function Messages() {
+function Messages({posts}) {
 
 return(
     <div>
