@@ -3,6 +3,9 @@
 
 function NewsFeed() {
 
+    fetch("http://localhost:3000/posts")
+    .then(resp => resp.json())
+    .then(resp => setPosts(resp))
 return(
     <div>
         <div>
