@@ -1,7 +1,8 @@
-// import React from 'react';
+import React, { useState } from 'react';
 
 
 function NewsFeed() {
+    const [posts, setPosts] = useState([])
 
     fetch("http://localhost:3000/posts")
     .then(resp => resp.json())
