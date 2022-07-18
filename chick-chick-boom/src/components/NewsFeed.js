@@ -17,6 +17,7 @@ function NewsFeed() {
 return(
     <div>
         <div>
+            <h1>News Feed</h1>
             {post}
         </div>
     </div>
