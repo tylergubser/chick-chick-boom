@@ -1,6 +1,6 @@
 import React from 'react';
 import NewsFeed from './NewsFeed.js';
-
+import Profile from './Profile.js'
 function Home() {
 
 
