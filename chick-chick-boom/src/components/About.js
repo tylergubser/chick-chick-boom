@@ -8,7 +8,6 @@ return (
     <p>Chick Chick Boom is a one stop chicken shop. You can track your chickens progress, Upload photo's, and even get information on how to fix certain problems.</p>
     </div>
 )
-
 }
 
 export default About;
