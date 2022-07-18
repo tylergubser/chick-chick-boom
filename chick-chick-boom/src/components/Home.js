@@ -12,6 +12,9 @@ return (
     <div>
         <NewsFeed/>
     </div>
+    <div>
+        <Profile/>
+    </div>
 </div>
 )
 
