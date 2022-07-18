@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import './App.css';
-import Home from './components/Home.js'
-import Navbar from './components/Navbar.js'
-import Profile from './components/Profile.js'
+import Home from './components/Home.js';
+import Navbar from './components/Navbar.js';
+import Profile from './components/Profile.js';
+import NewsFeed from './components/NewsFeed.js';
 import { useAuth0 } from "@auth0/auth0-react";
 
 
@@ -45,6 +46,9 @@ function App() {
       </Route>
       <Route exact path="/profile">
         <Profile/>
+      </Route>
+      <Route exact path="/News-feed">
+        <NewsFeed/>
       </Route>
     </Switch>
     </div>
