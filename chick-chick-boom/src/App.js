@@ -5,6 +5,7 @@ import Home from './components/Home.js';
 import Navbar from './components/Navbar.js';
 import Profile from './components/Profile.js';
 import NewsFeed from './components/NewsFeed.js';
+import NewPost from './components/NewPost.js';
 import { useAuth0 } from "@auth0/auth0-react";
 
 
@@ -49,6 +50,9 @@ function App() {
       </Route>
       <Route exact path="/News-feed">
         <NewsFeed/>
+      </Route>
+      <Route exact path="/new-post">
+        <NewPost/>
       </Route>
     </Switch>
     </div>
