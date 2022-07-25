@@ -5,8 +5,8 @@ function NewPost () {
 const [comment, setComment] = useState("");
 
 
-function handleSubmit(event) {
-    
+function handleSubmit(e) {
+    e
 }
 return (
 
