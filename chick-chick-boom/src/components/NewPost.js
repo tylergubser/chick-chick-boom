@@ -6,7 +6,7 @@ const [comment, setComment] = useState("");
 
 
 function handleSubmit(e) {
-    e
+    e.preventDefault()
 }
 return (
 
