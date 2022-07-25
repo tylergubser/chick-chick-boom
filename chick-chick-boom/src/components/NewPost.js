@@ -7,6 +7,8 @@ const [comment, setComment] = useState("");
 
 function handleSubmit(e) {
     e.preventDefault()
+    const formData = new FormData();
+        formData.append('comment', comment)
 }
 return (
 
